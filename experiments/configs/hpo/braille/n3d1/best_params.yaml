@@ -1,0 +1,44 @@
+cv_folds: 0
+direction: maximize
+n_epochs: 225
+n_trials: 250
+neuron: n3d1
+objective: val_comp
+optuna_best:
+  params:
+    inp_mean: 2.6409707069396973
+    inp_var: 16.976783752441406
+    lr: 0.006274957698557644
+    lr_min_factor: 0.030939446246539104
+    lr_scheduler: cosine
+    n_steps: 96
+    spike_rate_reg: 0.5423824409031902
+    surrogate_alpha: 0.733642840419517
+    time_jitter_std_us: 42873.45890470344
+    weight_decay: 0.00019820317621829173
+  trial_number: 118
+  value: 0.8575535377975091
+params:
+  inp_mean: 2.6409707069396973
+  inp_var: 16.976783752441406
+  lr: 0.006274957698557644
+  lr_min_factor: 0.030939446246539104
+  lr_scheduler: cosine
+  n_steps: 96
+  spike_rate_reg: 0.5423824409031902
+  surrogate_alpha: 0.733642840419517
+  time_jitter_std_us: 42873.45890470344
+  weight_decay: 0.00019820317621829173
+pruning:
+  enabled: true
+  pruner: median
+  startup_trials: 20
+  warmup_steps: 50
+selection_formula: val_acc - lambda * spike_energy_weight * val_spike_rate
+selection_lambda: 0.5
+selection_source: optuna_best
+spike_energy_weight: 0.8626094577780559
+study_name: braille-n3d1-final
+task: braille
+trial_number: 118
+value: 0.8575535377975091

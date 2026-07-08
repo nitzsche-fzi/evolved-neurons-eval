@@ -1,0 +1,7 @@
+pyyaml
+torch
+lightning[extra]
+optuna
+optuna-integration[pytorch_lightning]
+norse
+tonic

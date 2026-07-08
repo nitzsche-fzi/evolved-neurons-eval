@@ -1,0 +1,46 @@
+cv_folds: 0
+direction: maximize
+n_epochs: 100
+n_trials: 250
+neuron: n3d1
+objective: val_comp
+optuna_best:
+  params:
+    dt: 4
+    inp_mean: 0.39500436186790466
+    inp_var: 0.5037282109260559
+    lr: 0.00431045256687055
+    lr_min_factor: 0.08900091558003595
+    lr_scheduler: cosine
+    noise_p: 3.682110720353356e-05
+    spike_rate_reg: 1.7988364103855414
+    surrogate_alpha: 1.8711718534310555
+    time_jitter_std_us: 1798.8511887224838
+    weight_decay: 0.0005469557344967351
+  trial_number: 86
+  value: 0.6584096151377417
+params:
+  dt: 4
+  inp_mean: 0.39500436186790466
+  inp_var: 0.5037282109260559
+  lr: 0.00431045256687055
+  lr_min_factor: 0.08900091558003595
+  lr_scheduler: cosine
+  noise_p: 3.682110720353356e-05
+  spike_rate_reg: 1.7988364103855414
+  surrogate_alpha: 1.8711718534310555
+  time_jitter_std_us: 1798.8511887224838
+  weight_decay: 0.0005469557344967351
+pruning:
+  enabled: true
+  pruner: median
+  startup_trials: 20
+  warmup_steps: 50
+selection_formula: val_acc - lambda * spike_energy_weight * val_spike_rate
+selection_lambda: 0.5
+selection_source: optuna_best
+spike_energy_weight: 0.8626094577780559
+study_name: shd-n3d1-final
+task: shd
+trial_number: 86
+value: 0.6584096151377417

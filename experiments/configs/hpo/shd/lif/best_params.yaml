@@ -1,0 +1,46 @@
+cv_folds: 0
+direction: maximize
+n_epochs: 100
+n_trials: 250
+neuron: esn_lifbox
+objective: val_comp
+optuna_best:
+  params:
+    dt: 16
+    inp_mean: 1.3160150051116943
+    inp_var: 3.2960381507873535
+    lr: 0.003998225446358077
+    lr_min_factor: 0.2668959173390207
+    lr_scheduler: cosine
+    noise_p: 0.0002912835167851634
+    spike_rate_reg: 0.7328207754920628
+    surrogate_alpha: 1.7295210481649512
+    time_jitter_std_us: 33194.894547368276
+    weight_decay: 1.3574249539337072e-06
+  trial_number: 236
+  value: 0.6716391640298145
+params:
+  dt: 16
+  inp_mean: 1.3160150051116943
+  inp_var: 3.2960381507873535
+  lr: 0.003998225446358077
+  lr_min_factor: 0.2668959173390207
+  lr_scheduler: cosine
+  noise_p: 0.0002912835167851634
+  spike_rate_reg: 0.7328207754920628
+  surrogate_alpha: 1.7295210481649512
+  time_jitter_std_us: 33194.894547368276
+  weight_decay: 1.3574249539337072e-06
+pruning:
+  enabled: true
+  pruner: median
+  startup_trials: 20
+  warmup_steps: 50
+selection_formula: val_acc - lambda * spike_energy_weight * val_spike_rate
+selection_lambda: 0.5
+selection_source: optuna_best
+spike_energy_weight: 0.2628708261274444
+study_name: shd-esn_lifbox-final
+task: shd
+trial_number: 236
+value: 0.6716391640298145

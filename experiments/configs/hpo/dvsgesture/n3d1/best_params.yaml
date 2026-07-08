@@ -1,0 +1,50 @@
+cv_folds: 0
+direction: maximize
+n_epochs: 175
+n_trials: 250
+neuron: n3d1
+objective: val_comp
+optuna_best:
+  params:
+    dt: 8000
+    image_offset_halfwidth: 0.0787408846281228
+    image_scale_halfwidth: 0.04977461396890608
+    inp_mean: 0.4593919515609741
+    inp_var: 5.166314601898193
+    lr: 0.016100043910217854
+    lr_min_factor: 0.0016569402815808968
+    lr_scheduler: cosine
+    n_steps: 200
+    spike_rate_reg: 0.02036586557976646
+    surrogate_alpha: 1.506616229552623
+    time_skew_halfwidth: 0.19951240813759785
+    weight_decay: 0.0001466690355849772
+  trial_number: 176
+  value: 0.9688063073824583
+params:
+  dt: 8000
+  image_offset_halfwidth: 0.0787408846281228
+  image_scale_halfwidth: 0.04977461396890608
+  inp_mean: 0.4593919515609741
+  inp_var: 5.166314601898193
+  lr: 0.016100043910217854
+  lr_min_factor: 0.0016569402815808968
+  lr_scheduler: cosine
+  n_steps: 200
+  spike_rate_reg: 0.02036586557976646
+  surrogate_alpha: 1.506616229552623
+  time_skew_halfwidth: 0.19951240813759785
+  weight_decay: 0.0001466690355849772
+pruning:
+  enabled: true
+  pruner: median
+  startup_trials: 20
+  warmup_steps: 50
+selection_formula: val_acc - lambda * spike_energy_weight * val_spike_rate
+selection_lambda: 0.5
+selection_source: optuna_best
+spike_energy_weight: 0.8626094577780559
+study_name: dvs-n3d1-final
+task: dvsgesture
+trial_number: 176
+value: 0.9688063073824583

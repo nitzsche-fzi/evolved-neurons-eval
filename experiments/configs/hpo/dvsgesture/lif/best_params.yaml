@@ -1,0 +1,50 @@
+cv_folds: 0
+direction: maximize
+n_epochs: 175
+n_trials: 250
+neuron: esn_lifbox
+objective: val_comp
+optuna_best:
+  params:
+    dt: 10000
+    image_offset_halfwidth: 0.08773887574069988
+    image_scale_halfwidth: 0.09750497801340846
+    inp_mean: 0.5745031237602234
+    inp_var: 7.77290153503418
+    lr: 0.005637881025165885
+    lr_min_factor: 0.29284665108386454
+    lr_scheduler: cosine
+    n_steps: 200
+    spike_rate_reg: 4.3430572822709514
+    surrogate_alpha: 2.9105314399900353
+    time_skew_halfwidth: 0.287408204497105
+    weight_decay: 0.00012915864132413023
+  trial_number: 198
+  value: 0.9728704216948639
+params:
+  dt: 10000
+  image_offset_halfwidth: 0.08773887574069988
+  image_scale_halfwidth: 0.09750497801340846
+  inp_mean: 0.5745031237602234
+  inp_var: 7.77290153503418
+  lr: 0.005637881025165885
+  lr_min_factor: 0.29284665108386454
+  lr_scheduler: cosine
+  n_steps: 200
+  spike_rate_reg: 4.3430572822709514
+  surrogate_alpha: 2.9105314399900353
+  time_skew_halfwidth: 0.287408204497105
+  weight_decay: 0.00012915864132413023
+pruning:
+  enabled: true
+  pruner: median
+  startup_trials: 20
+  warmup_steps: 50
+selection_formula: val_acc - lambda * spike_energy_weight * val_spike_rate
+selection_lambda: 0.5
+selection_source: optuna_best
+spike_energy_weight: 0.2628708261274444
+study_name: dvs-esn_lifbox-final
+task: dvsgesture
+trial_number: 198
+value: 0.9728704216948639
