@@ -15,7 +15,7 @@ Additionally, `train.py` is the lower-level single-run script used by `run_eval.
 - `src/utils/`: metrics, energy accounting, aggregation helpers.
 - `scripts/`: queue helpers for running batches of jobs.
 - `experiments/configs/hpo/`: selected HPO parameter files used for evaluation in our publication.
-- `experiments/configs/checkpoints/`: trained lightning model checkpoints used for evaluation in our publication.
+- `experiments/configs/checkpoints/`: lightning checkpoints with trained network per task and neuron with best accuracy, as used for evaluation in our publication.
 
 Supported tasks:
 - `shd`
