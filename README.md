@@ -185,7 +185,7 @@ pass one directly to `run_eval.py`:
 python run_eval.py \
   --task dvsgesture \
   --neuron n2d2 \
-  --hpo-params configs/hpo/dvsgesture/n2d2/best_params.yaml \
+  --hpo-params experiments/configs/hpo/dvsgesture/n2d2/best_params.yaml \
   --n-runs 3 \
   --dataset-path data \
   --devices "[0]"
