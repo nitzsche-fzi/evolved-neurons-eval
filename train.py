@@ -26,9 +26,9 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-import pytorch_lightning as pl
+import lightning.pytorch as pl
 import yaml
-from pytorch_lightning.callbacks import ModelCheckpoint
+from lightning.pytorch.callbacks import ModelCheckpoint
 
 from src.data.datasets import build_datamodule
 from src.data.task_config import TaskConfig, TASK_CONFIGS

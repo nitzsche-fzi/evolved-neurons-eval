@@ -2,7 +2,7 @@ from typing import Callable, List, Optional
 from dataclasses import dataclass
 
 import torch
-import pytorch_lightning as pl
+import lightning.pytorch as pl
 from torch.optim.lr_scheduler import CosineAnnealingLR
 from torchmetrics.classification import MulticlassF1Score
 

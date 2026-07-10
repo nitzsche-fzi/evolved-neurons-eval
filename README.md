@@ -15,7 +15,7 @@ Additionally, `train.py` is the lower-level single-run script used by `run_eval.
 - `src/utils/`: metrics, energy accounting, aggregation helpers.
 - `scripts/`: queue helpers for running batches of jobs.
 - `experiments/configs/hpo/`: selected HPO parameter files used for evaluation in our publication.
-- `experiments/configs/checkpoints/`: lightning checkpoints with trained network per task and neuron with best accuracy, as used for evaluation in our publication.
+- `experiments/checkpoints/`: lightning checkpoints with trained network per task and neuron with best accuracy, as used for evaluation in our publication.
 
 Supported tasks:
 - `shd`
@@ -178,14 +178,14 @@ Useful modes:
 
 ## Reusing Provided HPO Parameters
 
-The `configs/hpo/` directory contains selected `best_params.yaml` files. You can
+The `experiments/configs/hpo/` directory contains selected `best_params.yaml` files. You can
 pass one directly to `run_eval.py`:
 
 ```bash
 python run_eval.py \
   --task dvsgesture \
   --neuron n2d2 \
-  --hpo-params configs/hpo/dvsgesture/dvs-n2d2-final/best_params.yaml \
+  --hpo-params configs/hpo/dvsgesture/n2d2/best_params.yaml \
   --n-runs 3 \
   --dataset-path data \
   --devices "[0]"

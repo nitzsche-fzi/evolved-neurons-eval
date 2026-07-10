@@ -36,8 +36,8 @@ import optuna
 from optuna.integration import PyTorchLightningPruningCallback
 from optuna.study import MaxTrialsCallback
 from optuna.trial import FrozenTrial, TrialState
-import pytorch_lightning as pl
-from pytorch_lightning.callbacks import EarlyStopping
+import lightning.pytorch as pl
+from lightning.pytorch.callbacks import EarlyStopping
 import yaml
 
 from compute_inp_stats import compute_inp_mean_var

@@ -4,7 +4,7 @@ import numpy as np
 import tonic
 import tonic.transforms as transforms
 from torch.utils.data import DataLoader, Dataset, Subset
-import pytorch_lightning as pl
+import lightning.pytorch as pl
 
 from esn.augmentations import AudioPad, AudioTransform, FrameTransform  # pyright: ignore[reportMissingImports]
 from braille_dataset import Braille, RandomOffsetPad # pyright: ignore[reportMissingImports]
