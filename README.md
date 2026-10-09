@@ -42,8 +42,8 @@ pip install -r requirements.txt
 ```
 
 This repository also expects two local packages to be importable:
-- `esn`, from the companion evolved-spiking-neurons codebase: <https://anonymous.4open.science/r/spiking-neurons/>
-- `braille_dataset`, from the companion Braille dataset repository: <https://anonymous.4open.science/r/spiking-braille/>
+- `esn`, from the companion evolved-spiking-neurons codebase: <https://github.com/nitzsche-fzi/spiking-neurons>
+- `braille_dataset`, from the companion Braille dataset repository: <https://github.com/nitzsche-fzi/spiking-braille>
 
 Please see those repositories for installation instructions. Make sure they are installed in the same environment.
 
